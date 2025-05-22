@@ -1,0 +1,128 @@
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background: #f9fafb;
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 30px;
+  h1 {
+    font-size: 36px;
+    color: #333;
+  }
+
+  .class-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #777;
+  }
+}
+
+.quiz-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+
+  .quiz-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .quiz-card-header {
+      text-align: center;
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 20px;
+        color: #333;
+      }
+    }
+
+    .quiz-card-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .quiz-card-option {
+        background-color: #f0f4f8;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #e2e7f1;
+        }
+
+        &.selected {
+          background-color: #5b9bd5;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+
+  .submit-btn {
+    background-color: #5b9bd5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 45%;
+    border: none;
+
+    &:hover {
+      background-color: #4a8ec9;
+    }
+  }
+
+  .quiz-navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    align-items: center;
+
+    .back-btn {
+      background-color: #f0f4f8;
+      color: #5b9bd5;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      border: none;
+
+      &:hover {
+        background-color: #dbe4ef;
+      }
+    }
+  }
+}
+
+.loading {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+}
